@@ -1,6 +1,6 @@
 {
   "name": "read-async-bson",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dump and restore an entire MongoDB database via a single stream, without creating a folder of files",
   "main": "index.js",
   "scripts": {
