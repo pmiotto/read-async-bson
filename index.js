@@ -132,7 +132,6 @@ module.exports = function(options, iteratorFn, finalFn) {
       });
     });
   }
-
   loadAndHandleDocument();
 };
 
