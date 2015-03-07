@@ -71,6 +71,10 @@ This implementation is extremely fast because it is designed to avoid allocating
 
 When you just want to handle incoming objects in a strict order, streams just make things complicated and introduce bugs. We've had no end of trouble with node object streams that don't respect `pause()` in the streams1 interface, or stall out without emitting `readable` again in the streams2 interface, or... wait, why are we using these again?
 
+## "What I really want is to stream an entire MongoDB database."
+
+[mongo-dump-stream](http://npmjs.org/packages/mongo-dump-stream) covers that use case nicely. Check it out.
+
 ## About P'unk Avenue and Apostrophe
 
 `read-async-bson` was created at [P'unk Avenue](http://punkave.com) for use in many projects built with Apostrophe, an open-source content management system built on node.js. If you like `read-async-bson` you should definitely [check out apostrophenow.org](http://apostrophenow.org).
@@ -85,7 +89,7 @@ Feel free to open issues on [github](http://github.com/punkave/read-async-bson).
 
 ### CHANGES IN 0.1.0
 
-Initial release. Refactored from `mongo-dump-stream`. New tests written, covering more cases.
+Initial release. Refactored from [mongo-dump-stream](http://npmjs.org/packages/mongo-dump-stream). New tests written, covering more cases.
 
 ## LICENSE
 
