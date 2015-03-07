@@ -46,11 +46,11 @@ describe('read-async-bson', function() {
   });
 
   it('can read a BSON stream from a file, receiving documents in order', function(done) {
-    return receive('test', { received: 100 }, done);
+    return receive('test-good', { received: 100 }, done);
   });
 
   it('can read a BSON stream from a file that is much larger than maxDocumentSize (which forces the buffer resize and buffer rotation logic to execute)', function(done) {
-    return receive('test', { maxDocumentSize: 100, received: 100 }, done);
+    return receive('test-good', { maxDocumentSize: 100, received: 100 }, done);
   });
 
   it('can reject a bogus file gracefully', function(done) {
@@ -78,6 +78,7 @@ describe('read-async-bson', function() {
         assert(err);
         assert(err.message == options.expectError);
       } else {
+        console.error(err);
         assert(!err);
       }
       assert(received === options.received);
