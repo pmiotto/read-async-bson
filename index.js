@@ -17,7 +17,6 @@ module.exports = function(options, iteratorFn, finalFn) {
     var needed = writePos + chunk.length;
     var size = buffer.length;
     if (needed > size) {
-      console.error('expanding buffer');
       while (needed > size) {
         size *= 2;
       }

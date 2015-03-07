@@ -87,6 +87,10 @@ Feel free to open issues on [github](http://github.com/punkave/read-async-bson).
 
 ## Changelog
 
+### CHANGES IN 0.1.1
+
+Do not invoke the final callback on end-of-stream unless we have actually consumed all of the data in our buffer.
+
 ### CHANGES IN 0.1.0
 
 Initial release. Refactored from [mongo-dump-stream](http://npmjs.org/packages/mongo-dump-stream). New tests written, covering more cases.
