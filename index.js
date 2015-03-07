@@ -75,7 +75,7 @@ module.exports = function(options, iteratorFn, finalFn) {
   }
 
   function loadAndHandleDocument() {
-    if (closed) {
+    if (closed && (readPos === writePos)) {
       // End of stream arrived at document boundary, that's OK
       return finalFn(null);
     }
