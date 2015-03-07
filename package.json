@@ -1,0 +1,35 @@
+{
+  "name": "read-async-bson",
+  "version": "0.1.0",
+  "description": "Dump and restore an entire MongoDB database via a single stream, without creating a folder of files",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/punkave/read-async-bson"
+  },
+  "keywords": [
+    "mongodb",
+    "mongodump",
+    "mongorestore",
+    "mongo",
+    "stream",
+    "mongo",
+    "dump",
+    "stream"
+  ],
+  "author": "P'unk Avenue LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/punkave/read-async-bson/issues"
+  },
+  "homepage": "https://github.com/punkave/read-async-bson",
+  "dependencies": {
+    "bson": "^0.2.19"
+  },
+  "devDependencies": {
+    "mocha": "2.1.x"
+  }
+}
