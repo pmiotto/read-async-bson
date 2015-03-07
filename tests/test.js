@@ -5,7 +5,13 @@ var BSON = require('bson').BSONPure.BSON;
 
 describe('read-async-bson', function() {
   it('create test BSON file', function(done) {
-    var out = fs.createWriteStream(__dirname + '/test-good.bson-stream');
+    var path = __dirname + '/test-good.bson-stream';
+    try {
+      fs.unlinkSync(path);
+    } catch (e) {
+      // It's OK if there was no previous run
+    }
+    var out = fs.createWriteStream(path);
     out.on('error', function() {
       assert(false);
     });
@@ -25,7 +31,13 @@ describe('read-async-bson', function() {
   });
 
   it('create BSON file with trailing garbage', function(done) {
-    var out = fs.createWriteStream(__dirname + '/test-iffy.bson-stream');
+    var path = __dirname + '/test-iffy.bson-stream';
+    try {
+      fs.unlinkSync(path);
+    } catch (e) {
+      // It's OK if there was no previous run
+    }
+    var out = fs.createWriteStream(path);
     out.on('error', function() {
       assert(false);
     });
