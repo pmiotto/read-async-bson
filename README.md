@@ -87,6 +87,10 @@ Feel free to open issues on [github](http://github.com/punkave/read-async-bson).
 
 ## Changelog
 
+### CHANGES IN 0.1.2
+
+Fixed package description.
+
 ### CHANGES IN 0.1.1
 
 Do not invoke the final callback on end-of-stream unless we have actually consumed all of the data in our buffer.

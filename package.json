@@ -1,7 +1,7 @@
 {
   "name": "read-async-bson",
-  "version": "0.1.1",
-  "description": "Dump and restore an entire MongoDB database via a single stream, without creating a folder of files",
+  "version": "0.1.2",
+  "description": "Read BSON documents from a stream, invoking a callback for each one and waiting patiently until it is processed.",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/test.js"
